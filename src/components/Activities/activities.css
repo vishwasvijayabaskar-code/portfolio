@@ -45,6 +45,24 @@
   border-left: 0 solid var(--accent-lime);
   transition: background 0.4s var(--ease-out-expo), border-left-width 0.35s var(--ease-out-expo), padding-left 0.35s var(--ease-out-expo);
   position: relative;
+  animation: activity-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--row-delay, 0ms) both;
+}
+
+@keyframes activity-in {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .activity {
+    animation: none;
+  }
 }
 
 .activity:hover {
