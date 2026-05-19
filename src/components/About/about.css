@@ -23,12 +23,31 @@
   text-transform: uppercase;
 }
 
+.about__lead-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .about__lead {
   font-size: clamp(2.2rem, 6.5vw, 6.5rem);
   letter-spacing: -0.015em;
   line-height: 1;
   color: var(--accent-cream);
   max-width: 18ch;
+  flex: 1 1 60%;
+}
+
+.about__portrait {
+  flex: 0 0 auto;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .about__portrait {
+    margin-top: 0.5rem;
+  }
 }
 
 .about__body-text {

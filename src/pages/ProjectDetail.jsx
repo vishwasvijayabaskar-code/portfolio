@@ -2,8 +2,15 @@ import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import projects from '../components/Projects/projectsData.js';
 import Stamp from '../components/Layout/Stamp.jsx';
+import TerminalFrame from '../components/Layout/TerminalFrame.jsx';
 import { useCursorHandlers } from '../context/CursorContext.jsx';
 import './project-detail.css';
+
+const SHOT_FALLBACK = '/photos/_screenshot-placeholder.svg';
+const handleShotError = (e) => {
+  if (e.currentTarget.src.endsWith(SHOT_FALLBACK)) return;
+  e.currentTarget.src = SHOT_FALLBACK;
+};
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -66,6 +73,20 @@ export default function ProjectDetail() {
 ╚══════════════════════════════════════════════════════╝`}
           </pre>
           <p className="project-detail__blurb">{project.blurb}</p>
+
+          <TerminalFrame
+            title={`${project.slug}-preview.png`}
+            path={`~/projects/${project.slug}`}
+            className="project-detail__shot"
+          >
+            <img
+              src={`/photos/${project.slug}.png`}
+              alt={`${project.title} preview screenshot`}
+              onError={handleShotError}
+              loading="lazy"
+              style={{ maxWidth: '100%', width: '100%' }}
+            />
+          </TerminalFrame>
         </section>
 
         <section className="project-detail__sections">

@@ -78,6 +78,10 @@
   gap: 1.5rem;
 }
 
+.project-detail__shot {
+  margin-top: 1rem;
+}
+
 .project-detail__ascii {
   font-size: 11px;
   color: var(--accent-lime);

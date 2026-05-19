@@ -3,13 +3,13 @@ import MarginNote from '../Layout/MarginNote.jsx';
 import './activities.css';
 
 const ACTIVITIES = [
-  { title: 'Life Scout', detail: 'Boy Scouts of America', tag: 'Leadership', years: '4y', micro: 'one merit badge from Eagle' },
-  { title: 'Financial Futures', detail: 'Co-founder, nonprofit', tag: 'Nonprofit', years: '1y', micro: 'teaching kids money before they need it' },
-  { title: 'Triangle Chess', detail: 'Teacher · 1300 OTB / 1800 online', tag: 'Teach', years: '3y', micro: 'kids teach me more than I teach them' },
-  { title: 'Capital Area Teen Court', detail: 'Bailiff · Jury', tag: 'Civic', years: '2y', micro: 'peer justice, real cases' },
-  { title: '4-H Teen Council', detail: 'Member', tag: 'Civic', years: '2y' },
-  { title: 'Volunteering', detail: '400+ hours volunteering', tag: 'Service', years: '10y' },
-  { title: 'JV Wrestling', detail: 'Green Level High School', tag: 'Athletics', years: '1y' },
+  { title: 'Life Scout', detail: 'Boy Scouts of America', tag: 'Leadership', years: '4y', micro: 'one merit badge from Eagle', photo: '/photos/scout.jpg' },
+  { title: 'Financial Futures', detail: 'Co-founder, nonprofit', tag: 'Nonprofit', years: '1y', micro: 'teaching kids money before they need it', photo: '/photos/nonprofit.jpg' },
+  { title: 'Triangle Chess', detail: 'Teacher · 1300 OTB / 1800 online', tag: 'Teach', years: '3y', micro: 'kids teach me more than I teach them', photo: '/photos/chess.jpg' },
+  { title: 'Capital Area Teen Court', detail: 'Bailiff · Jury', tag: 'Civic', years: '2y', micro: 'peer justice, real cases', photo: '/photos/teen-court.jpg' },
+  { title: '4-H Teen Council', detail: 'Member', tag: 'Civic', years: '2y', photo: '/photos/4h.jpg' },
+  { title: 'Volunteering', detail: '400+ hours volunteering', tag: 'Service', years: '10y', photo: '/photos/volunteering.jpg' },
+  { title: 'JV Wrestling', detail: 'Green Level High School', tag: 'Athletics', years: '1y', photo: '/photos/wrestling.jpg' },
 ];
 
 export default function Activities() {

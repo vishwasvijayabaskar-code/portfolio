@@ -1,0 +1,33 @@
+.halftone {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 224, 0.18);
+  background: var(--bg-deep);
+  flex-shrink: 0;
+}
+
+.halftone__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.4) brightness(1.05);
+  display: block;
+}
+
+.halftone__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #07050B 1px, transparent 1.2px);
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.halftone__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(191, 255, 54, 0.18), rgba(240, 64, 0, 0.12));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}

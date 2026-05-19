@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import WordReveal from './WordReveal.jsx';
 import MarginNote from '../Layout/MarginNote.jsx';
+import DuotonePhoto from '../Layout/DuotonePhoto.jsx';
 import './about.css';
 
 const STATS = [
@@ -20,11 +21,22 @@ export default function About() {
         <MarginNote side="left" rotate={3} top="60%">
           v slept 4 hrs writing this
         </MarginNote>
-        <WordReveal
-          as="p"
-          className="about__lead display"
-          text="Most days I'm training neural networks to read RNA. Other days, I am Larping my ECs."
-        />
+        <div className="about__lead-row">
+          <WordReveal
+            as="p"
+            className="about__lead display"
+            text="Most days I'm training neural networks to read RNA. Other days, I am Larping my ECs."
+          />
+          <DuotonePhoto
+            src="/photos/me.jpg"
+            alt="Vishwas — placeholder, swap in public/photos/me.jpg"
+            variant="lime"
+            rotate={-3}
+            width={220}
+            caption="VV / 2026 · CARY NC"
+            className="about__portrait"
+          />
+        </div>
 
         <div className="about__body">
           <WordReveal

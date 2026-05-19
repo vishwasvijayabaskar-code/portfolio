@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#1A0726"/>
+  <g fill="rgba(255,255,224,0.4)" font-family="JetBrains Mono, monospace" text-anchor="middle">
+    <text x="60" y="58" font-size="9" letter-spacing="2">SWAP</text>
+    <text x="60" y="72" font-size="9" letter-spacing="2">ME</text>
+  </g>
+  <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(191,255,54,0.5)" stroke-width="1" stroke-dasharray="3 3"/>
+</svg>
