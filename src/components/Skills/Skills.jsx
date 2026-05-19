@@ -57,11 +57,6 @@ export default function Skills() {
   return (
     <section className="skills" id="skills" ref={rootRef}>
       <div className="skills__intro container">
-        <div className="skills__meta mono">
-          <span>03 — STACK</span>
-          <span>—</span>
-          <span>HOW</span>
-        </div>
         <h2 className="skills__heading display">
           Tools <span className="lime">/ trade</span>.
         </h2>

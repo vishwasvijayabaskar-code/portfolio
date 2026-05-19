@@ -12,7 +12,10 @@ export default function ProjectDetail() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+    document.title = project
+      ? `${project.title.toUpperCase()} · VV / ${project.id}`
+      : '404 · VV';
+  }, [slug, project]);
 
   if (!project) {
     return (

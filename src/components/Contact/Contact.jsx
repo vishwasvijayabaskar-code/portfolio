@@ -50,12 +50,6 @@ export default function Contact() {
   return (
     <section className="contact" id="contact" ref={ref}>
       <div className="contact__inner container">
-        <div className="contact__meta mono">
-          <span>05 — CONTACT</span>
-          <span>—</span>
-          <span>NEXT</span>
-        </div>
-
         <h2 className="contact__headline display" ref={headlineRef}>
           Let's <span className="lime">build</span>.
         </h2>

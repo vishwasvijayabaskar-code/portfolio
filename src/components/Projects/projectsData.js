@@ -10,7 +10,7 @@ const projects = [
     year: '2026',
     stack: ['Python', 'PyTorch', 'Transformers', 'TensorBoard', 'GENCODE'],
     accent: '#BFFF36',
-    stamp: 'ISEF · 2026',
+    stamp: 'v0.2.0-beta',
     stampVariant: 'lime',
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     year: '2025–26',
     stack: ['Hardware', 'Materials', 'Research', 'Pitch'],
     accent: '#00E5FF',
-    stamp: 'PROTOTYPE',
+    stamp: 'PROTOTYPE-04',
     stampVariant: 'cream',
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     year: '2026',
     stack: ['LLM APIs', 'Automation', 'Outreach', 'Image Gen'],
     accent: '#F04000',
-    stamp: 'SHIPPED',
+    stamp: 'PROD · LIVE',
     stampVariant: 'red',
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     year: '2026',
     stack: ['Python', 'Streamlit', 'Multi-agent LLMs', 'Kelly Criterion'],
     accent: '#FF1493',
-    stamp: 'CLASSIFIED',
+    stamp: 'INTERNAL · α',
     stampVariant: 'red',
   },
   {
@@ -66,7 +66,7 @@ const projects = [
     year: '2026',
     stack: ['React', 'Supabase', 'Clerk', 'Plaid', 'TypeScript'],
     accent: '#C800FF',
-    stamp: 'IN BUILD',
+    stamp: 'BUILD #0142',
     stampVariant: 'lime',
   },
 ];

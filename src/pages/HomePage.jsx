@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Hero from '../components/Hero/Hero.jsx';
 import About from '../components/About/About.jsx';
 import Projects from '../components/Projects/Projects.jsx';
@@ -7,6 +8,10 @@ import Contact from '../components/Contact/Contact.jsx';
 import AsciiDivider from '../components/Layout/AsciiDivider.jsx';
 
 export default function HomePage({ isDesktop }) {
+  useEffect(() => {
+    document.title = 'VISHWAS VIJAYABASKAR — Puzzles to Problems';
+  }, []);
+
   return (
     <main>
       <Hero />

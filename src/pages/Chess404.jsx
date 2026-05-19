@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCursorHandlers } from '../context/CursorContext.jsx';
 import './chess-404.css';
@@ -29,6 +29,10 @@ export default function Chess404() {
   const [highlight, setHighlight] = useState(null);
   const sq = useCursorHandlers('view', 'PLAY');
   const back = useCursorHandlers('write', 'HOME');
+
+  useEffect(() => {
+    document.title = '404 · MATE IN 1 · VV';
+  }, []);
 
   const handleClick = (r, c) => {
     setHighlight({ r, c });

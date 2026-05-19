@@ -20,12 +20,6 @@ export default function About() {
         <MarginNote side="left" rotate={3} top="60%">
           v slept 4 hrs writing this
         </MarginNote>
-        <div className="about__meta mono">
-          <span>01 — ABOUT</span>
-          <span>—</span>
-          <span>WHO</span>
-        </div>
-
         <WordReveal
           as="p"
           className="about__lead display"

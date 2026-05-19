@@ -46,11 +46,6 @@ export default function Projects({ isDesktop = true }) {
         <MarginNote side="right" rotate={-5} top="40%">
           click any panel &mdash; rabbit hole
         </MarginNote>
-        <div className="projects__meta mono">
-          <span>02 — PROJECTS</span>
-          <span>—</span>
-          <span>WHAT</span>
-        </div>
         <h2 className="projects__heading display">
           Things <span className="lime">/ built</span>.
         </h2>

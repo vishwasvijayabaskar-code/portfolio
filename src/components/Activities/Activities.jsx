@@ -19,12 +19,6 @@ export default function Activities() {
         <MarginNote side="left" rotate={-4} top="55%">
           chess kids teach me more than i teach them
         </MarginNote>
-        <div className="activities__meta mono">
-          <span>04 — ELSEWHERE</span>
-          <span>—</span>
-          <span>WHEN NOT BUILDING</span>
-        </div>
-
         <h2 className="activities__heading display">
           Off <span className="red">/ keyboard</span>.
         </h2>

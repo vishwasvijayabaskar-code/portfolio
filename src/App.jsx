@@ -11,23 +11,26 @@ import HomePage from './pages/HomePage.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
 import Chess404 from './pages/Chess404.jsx';
 import useMediaQuery from './hooks/useMediaQuery.js';
+import useReducedMotion from './hooks/useReducedMotion.js';
 
 export default function App() {
   const isDesktop = useMediaQuery('(min-width: 768px)');
+  const reducedMotion = useReducedMotion();
+  const enable3D = isDesktop && !reducedMotion;
 
   return (
     <BrowserRouter>
       <CursorProvider>
-        <SmoothScroll>
+        <SmoothScroll reducedMotion={reducedMotion}>
           <div className="nyan-bg" aria-hidden="true" />
-          {isDesktop && <BackgroundCanvas />}
+          {enable3D && <BackgroundCanvas />}
           <ScanlineOverlay />
           <GrainOverlay />
           <Cursor />
           <StatusWidget />
           <KonamiEgg />
           <Routes>
-            <Route path="/" element={<HomePage isDesktop={isDesktop} />} />
+            <Route path="/" element={<HomePage isDesktop={enable3D} />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="*" element={<Chess404 />} />
           </Routes>
