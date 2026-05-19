@@ -7,7 +7,7 @@ const STATUS_OPTIONS = [
   'WRITING this site',
   'STUDYING AP Gov',
   'TRAINING wrestling',
-  'READING The Selfish Gene',
+  'READING The Bhagavad Gita',
 ];
 
 function getCaryTime() {
