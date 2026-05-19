@@ -23,14 +23,14 @@ export default function About() {
         <WordReveal
           as="p"
           className="about__lead display"
-          text="Most days I'm training a neural net to read RNA. Other days I'm wrestling at Green Level."
+          text="Most days I'm training neural networks to read RNA. Other days Gooning at Home."
         />
 
         <div className="about__body">
           <WordReveal
             as="p"
             className="about__body-text"
-            text="16. Cary, NC. ISEF research. Five startups in flight. Sleeping when forced."
+            text="16. Cary, NC. Science research. Creating startups in flight. Sleeping when forced."
           />
         </div>
 
