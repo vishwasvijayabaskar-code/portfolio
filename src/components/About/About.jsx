@@ -6,8 +6,8 @@ import './about.css';
 const STATS = [
   { label: 'GPA', value: '4.45' },
   { label: 'BSA RANK', value: 'LIFE' },
-  { label: 'LOC SHIPPED', value: '50k+' },
-  { label: 'STARTUPS', value: '5+' },
+  { label: 'LOC SHIPPED', value: '300k+' },
+  { label: 'STARTUPS', value: '2+' },
 ];
 
 export default function About() {
