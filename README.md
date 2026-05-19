@@ -48,6 +48,38 @@ npm run build        # production bundle to dist/
 npm run preview      # preview production build locally
 ```
 
+## Live integrations
+
+### Weather — `wttr.in` (no setup, already live)
+Status widget pulls real Cary, NC weather every 15 min. Zero config. Falls back to `Cary, NC · 64°F · clear` if API errors.
+
+### Spotify "now playing" — optional, env-gated
+Server route at `/api/spotify.js` (Vercel serverless). Polls every 30s from client. Falls back to hardcoded J. Cole line if env vars missing.
+
+**Setup:**
+1. Register app at https://developer.spotify.com/dashboard
+2. Add Redirect URI: `http://localhost:8888/callback`
+3. Get a **refresh token** (one-time OAuth):
+   ```bash
+   # Open this in browser (replace CLIENT_ID):
+   https://accounts.spotify.com/authorize?client_id=CLIENT_ID&response_type=code&redirect_uri=http://localhost:8888/callback&scope=user-read-currently-playing
+   # After approve → you're redirected to /callback?code=AUTH_CODE
+   # Exchange code for refresh_token:
+   curl -X POST https://accounts.spotify.com/api/token \
+     -H "Authorization: Basic $(echo -n 'CLIENT_ID:CLIENT_SECRET' | base64)" \
+     -d "grant_type=authorization_code&code=AUTH_CODE&redirect_uri=http://localhost:8888/callback"
+   ```
+4. In Vercel project → Settings → Environment Variables, add:
+   - `SPOTIFY_CLIENT_ID`
+   - `SPOTIFY_CLIENT_SECRET`
+   - `SPOTIFY_REFRESH_TOKEN`
+5. Redeploy.
+
+### Google Analytics — optional, env-gated
+Add `VITE_GA_ID=G-XXXXXXXXXX` in Vercel env vars. GA4 script loads only when set. Anonymized IP by default.
+
+---
+
 ## Deploy to Vercel
 
 ### Option A — CLI
