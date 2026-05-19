@@ -1,4 +1,5 @@
 import ActivityRow from './ActivityRow.jsx';
+import MarginNote from '../Layout/MarginNote.jsx';
 import './activities.css';
 
 const ACTIVITIES = [
@@ -15,6 +16,9 @@ export default function Activities() {
   return (
     <section className="activities" id="activities">
       <div className="activities__inner container">
+        <MarginNote side="left" rotate={-4} top="55%">
+          chess kids teach me more than i teach them
+        </MarginNote>
         <div className="activities__meta mono">
           <span>04 — ELSEWHERE</span>
           <span>—</span>

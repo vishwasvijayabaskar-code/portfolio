@@ -18,6 +18,8 @@
   --font-display: 'Anton', Impact, sans-serif;
   --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-hand: 'Caveat', 'Comic Sans MS', cursive;
+  --font-pixel: 'VT323', 'JetBrains Mono', monospace;
 
   /* sizing */
   --container: min(1440px, 92vw);

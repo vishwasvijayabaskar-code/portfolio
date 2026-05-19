@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import WordReveal from './WordReveal.jsx';
+import MarginNote from '../Layout/MarginNote.jsx';
 import './about.css';
 
 const STATS = [
   { label: 'GPA', value: '4.45' },
-  { label: 'CHESS OTB', value: '1300' },
-  { label: 'CUBE PR', value: '57.32s' },
+  { label: 'BSA RANK', value: 'LIFE' },
+  { label: 'LOC SHIPPED', value: '50k+' },
   { label: 'STARTUPS', value: '5+' },
 ];
 
@@ -13,6 +14,12 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="about__inner container">
+        <MarginNote side="right" rotate={-6} top="18%">
+          almost eagle &mdash; one merit badge out
+        </MarginNote>
+        <MarginNote side="left" rotate={3} top="60%">
+          v slept 4 hrs writing this
+        </MarginNote>
         <div className="about__meta mono">
           <span>01 — ABOUT</span>
           <span>—</span>

@@ -1,6 +1,11 @@
 .activities {
   padding: clamp(6rem, 16vh, 12rem) 0;
   position: relative;
+  overflow: hidden;
+}
+
+.activities__inner {
+  position: relative;
 }
 
 .activities__inner {

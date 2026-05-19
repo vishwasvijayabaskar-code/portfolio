@@ -1,6 +1,11 @@
 .about {
   padding: clamp(6rem, 18vh, 14rem) 0;
   position: relative;
+  overflow: hidden;
+}
+
+.about__inner {
+  position: relative;
 }
 
 .about__inner {

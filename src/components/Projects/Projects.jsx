@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import projects from './projectsData.js';
 import ProjectPanel from './ProjectPanel.jsx';
+import MarginNote from '../Layout/MarginNote.jsx';
 import './projects.css';
 
 export default function Projects({ isDesktop = true }) {
@@ -42,6 +43,9 @@ export default function Projects({ isDesktop = true }) {
   return (
     <section className="projects" id="projects">
       <div className="projects__intro container">
+        <MarginNote side="right" rotate={-5} top="40%">
+          click any panel &mdash; rabbit hole
+        </MarginNote>
         <div className="projects__meta mono">
           <span>02 — PROJECTS</span>
           <span>—</span>
@@ -51,7 +55,7 @@ export default function Projects({ isDesktop = true }) {
           Things <span className="lime">/ built</span>.
         </h2>
         <p className="projects__lede mono">
-          {isDesktop ? 'SCROLL HORIZONTALLY ↓' : 'SCROLL DOWN ↓'}
+          {isDesktop ? 'SCROLL HORIZONTALLY → · CLICK TO OPEN' : 'TAP TO OPEN ↓'}
         </p>
       </div>
 

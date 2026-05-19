@@ -1,6 +1,7 @@
 const projects = [
   {
     id: '01',
+    slug: 'lncrna',
     title: 'lncRNA',
     subtitle: 'Deep Learning for RNA Localization',
     blurb:
@@ -9,9 +10,12 @@ const projects = [
     year: '2026',
     stack: ['Python', 'PyTorch', 'Transformers', 'TensorBoard', 'GENCODE'],
     accent: '#BFFF36',
+    stamp: 'ISEF · 2026',
+    stampVariant: 'lime',
   },
   {
     id: '02',
+    slug: 'filtercycle',
     title: 'FilterCycle / FLUX',
     subtitle: 'Microplastic Filtration Hardware',
     blurb:
@@ -20,9 +24,12 @@ const projects = [
     year: '2025–26',
     stack: ['Hardware', 'Materials', 'Research', 'Pitch'],
     accent: '#00E5FF',
+    stamp: 'PROTOTYPE',
+    stampVariant: 'cream',
   },
   {
     id: '03',
+    slug: 'ssma',
     title: 'SSMA',
     subtitle: 'AI Social Media Assets for Local Business',
     blurb:
@@ -31,9 +38,12 @@ const projects = [
     year: '2026',
     stack: ['LLM APIs', 'Automation', 'Outreach', 'Image Gen'],
     accent: '#F04000',
+    stamp: 'SHIPPED',
+    stampVariant: 'red',
   },
   {
     id: '04',
+    slug: 'prediction-market-algo',
     title: 'Prediction Market Algorithm',
     subtitle: 'Automated Event-Market Trading',
     blurb:
@@ -42,9 +52,12 @@ const projects = [
     year: '2026',
     stack: ['Python', 'Streamlit', 'Multi-agent LLMs', 'Kelly Criterion'],
     accent: '#FF1493',
+    stamp: 'CLASSIFIED',
+    stampVariant: 'red',
   },
   {
     id: '05',
+    slug: 'curo',
     title: 'Curo',
     subtitle: 'SaaS Spend Management',
     blurb:
@@ -53,6 +66,8 @@ const projects = [
     year: '2026',
     stack: ['React', 'Supabase', 'Clerk', 'Plaid', 'TypeScript'],
     accent: '#C800FF',
+    stamp: 'IN BUILD',
+    stampVariant: 'lime',
   },
 ];
 

@@ -1,14 +1,24 @@
+import { Link } from 'react-router-dom';
 import { useCursorHandlers } from '../../context/CursorContext.jsx';
+import Stamp from '../Layout/Stamp.jsx';
 
 export default function ProjectPanel({ project, index }) {
   const cursor = useCursorHandlers('view', 'EXPLORE');
 
   return (
-    <article
+    <Link
+      to={`/projects/${project.slug}`}
       className="project"
       style={{ '--project-accent': project.accent }}
       {...cursor}
     >
+      <Stamp
+        label={project.stamp}
+        variant={project.stampVariant}
+        rotate={-6 + index * 2}
+        className="project__stamp"
+      />
+
       <header className="project__header mono">
         <span className="project__num">{project.id}</span>
         <span className="project__year">{project.year}</span>
@@ -30,9 +40,9 @@ export default function ProjectPanel({ project, index }) {
           ))}
         </ul>
         <span className="project__index mono">
-          {String(index + 1).padStart(2, '0')} / 05
+          {String(index + 1).padStart(2, '0')} / 05 ↗
         </span>
       </footer>
-    </article>
+    </Link>
   );
 }

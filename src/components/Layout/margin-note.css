@@ -1,0 +1,38 @@
+.margin-note {
+  position: absolute;
+  font-family: var(--font-hand);
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--accent-lime);
+  transform: rotate(var(--note-rotate, -4deg));
+  pointer-events: none;
+  user-select: none;
+  max-width: 22ch;
+  top: var(--note-top, 20%);
+  z-index: 2;
+  opacity: 0.92;
+  filter: drop-shadow(0 1px 0 rgba(7, 5, 11, 0.8));
+}
+
+.margin-note--right {
+  right: -1rem;
+}
+
+.margin-note--left {
+  left: -1rem;
+}
+
+.margin-note::before {
+  content: '↘';
+  display: inline-block;
+  margin-right: 0.25rem;
+  color: var(--accent-red);
+  transform: rotate(-25deg);
+}
+
+@media (max-width: 1100px) {
+  .margin-note {
+    display: none;
+  }
+}

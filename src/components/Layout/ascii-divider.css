@@ -1,0 +1,58 @@
+.ascii-div {
+  padding: 1.5rem 0 0.5rem;
+  font-family: var(--font-mono);
+  color: var(--accent-lime);
+  font-size: 11px;
+  letter-spacing: 0;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+.ascii-div__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ascii-div__line {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(191, 255, 54, 0.4);
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.ascii-div__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ascii-div__label {
+  color: var(--accent-lime);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.ascii-div__dot {
+  color: var(--accent-red);
+  font-size: 7px;
+  letter-spacing: 0.3em;
+}
+
+.ascii-div__right {
+  color: var(--text-muted);
+  letter-spacing: 0.22em;
+}
+
+@media (max-width: 768px) {
+  .ascii-div__line {
+    font-size: 8px;
+  }
+}

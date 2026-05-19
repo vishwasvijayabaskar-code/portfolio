@@ -4,6 +4,10 @@
 }
 
 .projects__intro {
+  position: relative;
+}
+
+.projects__intro {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -76,7 +80,29 @@
   padding: clamp(2rem, 4vw, 4rem);
   position: relative;
   overflow: hidden;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.45s var(--ease-out-expo);
+  text-decoration: none;
+  color: inherit;
+  cursor: none;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  border-color: var(--project-accent, var(--accent-lime));
+  animation: project-glitch 0.42s steps(2);
+}
+
+@keyframes project-glitch {
+  0%   { transform: translate(0, -4px); }
+  20%  { transform: translate(-2px, -3px) skewX(0.4deg); filter: hue-rotate(-12deg); }
+  40%  { transform: translate(2px, -5px) skewX(-0.4deg); filter: hue-rotate(12deg); }
+  60%  { transform: translate(-1px, -4px); }
+  100% { transform: translate(0, -4px); filter: none; }
+}
+
+.project__stamp {
+  top: clamp(1rem, 2.5vw, 2rem);
+  right: clamp(1rem, 3vw, 2.5rem);
 }
 
 .is-horizontal .project {

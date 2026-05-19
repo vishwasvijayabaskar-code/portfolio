@@ -1,0 +1,57 @@
+.stamp {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.9rem;
+  border: 2.5px solid currentColor;
+  transform: rotate(var(--stamp-rotate, -8deg));
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.88;
+  text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
+  border-radius: 3px;
+  background: transparent;
+  white-space: nowrap;
+  filter: contrast(1.2);
+}
+
+.stamp::before,
+.stamp::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px solid currentColor;
+  pointer-events: none;
+  opacity: 0.55;
+  border-radius: 2px;
+}
+
+.stamp::after {
+  inset: -6px;
+  border: none;
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1.5px);
+  background-size: 4px 4px;
+  opacity: 0.06;
+  border-radius: 0;
+}
+
+.stamp--red {
+  color: #E64A0A;
+}
+
+.stamp--lime {
+  color: #9FE020;
+}
+
+.stamp--cream {
+  color: var(--accent-cream);
+}
+
+.stamp__inner {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
