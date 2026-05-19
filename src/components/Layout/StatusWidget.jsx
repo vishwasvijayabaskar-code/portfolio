@@ -8,6 +8,8 @@ const STATUS_OPTIONS = [
   'STUDYING AP Gov',
   'TRAINING wrestling',
   'READING The Bhagavad Gita',
+  'TRYING Konami Code',
+  'CREATING 404 Error',
 ];
 
 function getCaryTime() {
