@@ -15,7 +15,7 @@ const rowV = {
   },
 };
 
-export default function ActivityRow({ index, title, detail, tag }) {
+export default function ActivityRow({ index, title, detail, tag, years, micro }) {
   return (
     <motion.div
       className="activity"
@@ -25,8 +25,12 @@ export default function ActivityRow({ index, title, detail, tag }) {
       viewport={{ once: true, amount: 0.4 }}
     >
       <span className="activity__num mono">{String(index + 1).padStart(2, '0')}</span>
-      <h3 className="activity__title display">{title}</h3>
+      <div className="activity__body">
+        <h3 className="activity__title display">{title}</h3>
+        {micro && <span className="activity__micro mono">// {micro}</span>}
+      </div>
       <span className="activity__detail mono">{detail}</span>
+      <span className="activity__years mono">[{years}]</span>
       <span className="activity__tag mono">{tag}</span>
     </motion.div>
   );

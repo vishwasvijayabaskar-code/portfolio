@@ -50,17 +50,21 @@ export default function Contact() {
   return (
     <section className="contact" id="contact" ref={ref}>
       <div className="contact__inner container">
-        <h2 className="contact__headline display" ref={headlineRef}>
-          Let's <span className="lime">build</span>.
+        <p className="contact__pretitle mono">
+          ▓ OPEN INBOX · OPEN TO RESEARCH, BUILDS, WEIRD IDEAS
+        </p>
+        <h2 className="contact__email-headline display" ref={headlineRef}>
+          <span className="contact__email-link" onClick={copyEmail}>
+            vishwasvijayabaskar
+            <span className="contact__at">@</span>
+            gmail.com
+          </span>
         </h2>
+        <p className="contact__sublede mono">
+          ↑ CLICK TO COPY · OR REACH ME ↓
+        </p>
 
         <div className="contact__links">
-          <ContactLink
-            label="EMAIL · CLICK TO COPY"
-            value={EMAIL}
-            onClick={copyEmail}
-            variant="write"
-          />
           <ContactLink
             label="GITHUB"
             value="github.com/vvijayabaskar"

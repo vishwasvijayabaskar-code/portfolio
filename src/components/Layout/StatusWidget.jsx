@@ -39,6 +39,7 @@ export default function StatusWidget() {
 
   return (
     <div className="status-widget mono" aria-hidden="true">
+      <span className="status-widget__title">SYSTEM/ONLINE</span>
       <div className="status-widget__row">
         <span className="status-widget__dot" />
         <span className="status-widget__key">LIVE</span>

@@ -49,29 +49,71 @@
 .skill-chip {
   display: inline-flex;
   align-items: center;
-  padding: 0.85rem 1.4rem;
+  padding: 0.7rem 1.2rem;
   border: 1px solid rgba(255, 255, 224, 0.18);
   background: rgba(255, 255, 255, 0.02);
   border-radius: 999px;
-  font-size: clamp(0.9rem, 1.4vw, 1.3rem);
+  font-size: clamp(0.85rem, 1.3vw, 1.2rem);
   letter-spacing: 0.04em;
   color: var(--accent-cream);
   white-space: nowrap;
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
+/* size variety */
+.skill-chip:nth-child(4n + 1) {
+  font-size: clamp(1.05rem, 1.7vw, 1.55rem);
+  padding: 0.85rem 1.5rem;
+}
+
+.skill-chip:nth-child(7n + 3) {
+  font-size: clamp(0.75rem, 1.1vw, 1rem);
+  padding: 0.55rem 0.95rem;
+}
+
+/* color variety */
 .skill-chip:nth-child(3n + 1) {
-  border-color: rgba(191, 255, 54, 0.35);
+  border-color: rgba(191, 255, 54, 0.4);
   color: var(--accent-lime);
 }
 
 .skill-chip:nth-child(3n + 2) {
-  border-color: rgba(240, 64, 0, 0.35);
+  border-color: rgba(240, 64, 0, 0.4);
   color: var(--accent-red);
+}
+
+/* filled variety */
+.skill-chip:nth-child(5n + 2) {
+  background: var(--accent-lime);
+  color: var(--bg-base);
+  border-color: var(--accent-lime);
+}
+
+.skill-chip:nth-child(11n + 4) {
+  background: var(--accent-red);
+  color: var(--accent-cream);
+  border-color: var(--accent-red);
 }
 
 .skill-chip:hover {
   background: var(--accent-cream);
   color: var(--bg-base);
   border-color: var(--accent-cream);
+}
+
+/* prefix marker */
+.skill-chip::before {
+  content: '/';
+  margin-right: 0.4rem;
+  color: currentColor;
+  opacity: 0.4;
+}
+
+.skill-chip:nth-child(6n)::before {
+  content: '★';
+}
+
+.skill-chip:nth-child(9n + 1)::before {
+  content: '◆';
+  font-size: 0.65em;
 }

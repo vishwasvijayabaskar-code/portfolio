@@ -11,8 +11,8 @@
 
   /* text */
   --text-primary: #FFFFE0;
-  --text-muted: rgba(255, 255, 224, 0.55);
-  --text-dim: rgba(255, 255, 224, 0.32);
+  --text-muted: rgba(255, 255, 224, 0.62);
+  --text-dim: rgba(255, 255, 224, 0.42);
 
   /* fonts */
   --font-display: 'Anton', Impact, sans-serif;

@@ -36,7 +36,7 @@ export default function Skills() {
         end: 'bottom top',
         onUpdate: (self) => {
           const v = self.getVelocity();
-          const boost = 1 + Math.min(Math.abs(v) / 800, 4);
+          const boost = 1 + Math.min(Math.abs(v) / 1200, 1.5);
           tweens.forEach((tw, i) => {
             if (!tw) return;
             const dir = i % 2 === 0 ? -1 : 1;

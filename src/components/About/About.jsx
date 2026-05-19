@@ -23,39 +23,32 @@ export default function About() {
         <WordReveal
           as="p"
           className="about__lead display"
-          text="I'm a 16 year old builder, researcher, and founder based in Cary, NC."
+          text="Most days I'm training a neural net to read RNA. Other days I'm wrestling at Green Level."
         />
 
         <div className="about__body">
           <WordReveal
             as="p"
             className="about__body-text"
-            text="ISEF researcher. Startup builder. Problem solver. Roadrunner. Risk taker."
+            text="16. Cary, NC. ISEF research. Five startups in flight. Sleeping when forced."
           />
         </div>
 
         <motion.div
-          className="about__stats"
-          initial="hidden"
-          whileInView="show"
+          className="about__stats-row mono"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.08, delayChildren: 0.2 } },
-          }}
         >
-          {STATS.map((s) => (
-            <motion.div
-              key={s.label}
-              className="about__stat"
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
-              }}
-            >
-              <span className="about__stat-value display">{s.value}</span>
-              <span className="about__stat-label mono">{s.label}</span>
-            </motion.div>
+          {STATS.map((s, i) => (
+            <span key={s.label} className="about__stat-inline">
+              <span className="about__stat-inline-val">{s.value}</span>
+              <span className="about__stat-inline-label">{s.label}</span>
+              {i < STATS.length - 1 && (
+                <span className="about__stat-inline-sep">·</span>
+              )}
+            </span>
           ))}
         </motion.div>
       </div>

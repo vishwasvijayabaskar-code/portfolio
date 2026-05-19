@@ -1,5 +1,6 @@
 import HeroTitle from './HeroTitle.jsx';
 import ScrollIndicator from './ScrollIndicator.jsx';
+import HeroTicker from './HeroTicker.jsx';
 import './hero.css';
 
 export default function Hero() {
@@ -14,9 +15,10 @@ export default function Hero() {
         <HeroTitle />
         <div className="hero__sub mono">
           <span className="hero__sub-bullet">●</span>
-          <span>BUILDER · RESEARCHER · FOUNDER</span>
+          <span>BUILDER · 16 · CARY NC</span>
         </div>
       </div>
+      <HeroTicker />
       <ScrollIndicator />
     </section>
   );

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import projects from './projectsData.js';
@@ -9,6 +9,7 @@ import './projects.css';
 export default function Projects({ isDesktop = true }) {
   const wrapRef = useRef(null);
   const trackRef = useRef(null);
+  const [activeIdx, setActiveIdx] = useState(0);
 
   useEffect(() => {
     if (!isDesktop) return undefined;
@@ -30,6 +31,13 @@ export default function Projects({ isDesktop = true }) {
           scrub: 1,
           anticipatePin: 1,
           invalidateOnRefresh: true,
+          onUpdate: (self) => {
+            const idx = Math.min(
+              projects.length - 1,
+              Math.round(self.progress * (projects.length - 1))
+            );
+            setActiveIdx(idx);
+          },
         },
       });
 
@@ -55,6 +63,21 @@ export default function Projects({ isDesktop = true }) {
       </div>
 
       <div className="projects__pin" ref={wrapRef}>
+        {isDesktop && (
+          <div className="projects__progress mono" aria-hidden="true">
+            {projects.map((p, i) => (
+              <span
+                key={p.id}
+                className={`projects__progress-dot ${i === activeIdx ? 'is-active' : ''}`}
+              >
+                {p.id}
+              </span>
+            ))}
+            <span className="projects__progress-current">
+              [{projects[activeIdx]?.title}]
+            </span>
+          </div>
+        )}
         <div className={`projects__track ${isDesktop ? 'is-horizontal' : 'is-vertical'}`} ref={trackRef}>
           {projects.map((p, i) => (
             <ProjectPanel project={p} index={i} key={p.id} />

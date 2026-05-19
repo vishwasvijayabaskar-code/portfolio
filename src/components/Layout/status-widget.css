@@ -18,8 +18,7 @@
   user-select: none;
 }
 
-.status-widget::before {
-  content: 'SYSTEM/ONLINE';
+.status-widget__title {
   position: absolute;
   top: -8px;
   left: 8px;

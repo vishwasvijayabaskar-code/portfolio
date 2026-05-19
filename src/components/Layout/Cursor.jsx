@@ -15,8 +15,8 @@ export default function Cursor() {
 
     const dotX = gsap.quickTo(dot, 'x', { duration: 0.08, ease: 'power3.out' });
     const dotY = gsap.quickTo(dot, 'y', { duration: 0.08, ease: 'power3.out' });
-    const ringX = gsap.quickTo(ring, 'x', { duration: 0.45, ease: 'power3.out' });
-    const ringY = gsap.quickTo(ring, 'y', { duration: 0.45, ease: 'power3.out' });
+    const ringX = gsap.quickTo(ring, 'x', { duration: 0.32, ease: 'power3.out' });
+    const ringY = gsap.quickTo(ring, 'y', { duration: 0.32, ease: 'power3.out' });
 
     const onMove = (e) => {
       dotX(e.clientX);

@@ -71,19 +71,38 @@ export default function ProjectDetail() {
         <section className="project-detail__sections">
           <div className="project-detail__section">
             <h2 className="project-detail__sec-title mono">▓ THE PROBLEM</h2>
-            <p className="project-detail__placeholder">[ pending — Vishwas to write ]</p>
+            <pre className="project-detail__gitlog mono">
+{`$ git log --oneline problem.md
+0a3f1b WIP: outline framing
+7d22c8 TODO: write motivation
+e91c2a TODO: cite prior art`}
+            </pre>
           </div>
           <div className="project-detail__section">
             <h2 className="project-detail__sec-title mono">▓ APPROACH</h2>
-            <p className="project-detail__placeholder">[ pending — architecture diagrams + decisions ]</p>
+            <pre className="project-detail__gitlog mono">
+{`$ git log --oneline approach.md
+4b8d11 WIP: arch diagram sketch
+2f9e07 TODO: document tradeoffs
+- - -  pending review`}
+            </pre>
           </div>
           <div className="project-detail__section">
             <h2 className="project-detail__sec-title mono">▓ WHAT I LEARNED</h2>
-            <p className="project-detail__placeholder">[ pending — retrospective ]</p>
+            <pre className="project-detail__gitlog mono">
+{`$ git log --oneline retro.md
+- - -  not committed yet
+- - -  wait until project ships`}
+            </pre>
           </div>
           <div className="project-detail__section">
             <h2 className="project-detail__sec-title mono">▓ NEXT</h2>
-            <p className="project-detail__placeholder">[ pending — roadmap / follow-ups ]</p>
+            <pre className="project-detail__gitlog mono">
+{`$ git log --oneline roadmap.md
+8c1d4f TODO: v0.3 features
+2a7b91 TODO: stretch goals
+- - -  open for ideas`}
+            </pre>
           </div>
         </section>
 

@@ -88,8 +88,21 @@
   background: #1A1027;
 }
 
-.chess-404__sq:hover {
+.chess-404__sq.is-legal::after {
+  content: '';
+  position: absolute;
+  inset: 30%;
+  border-radius: 50%;
+  background: rgba(191, 255, 54, 0.18);
+  pointer-events: none;
+}
+
+.chess-404__sq.is-legal:hover {
   background: var(--accent-lime);
+}
+
+.chess-404__sq:not(.is-legal):hover {
+  background: rgba(240, 64, 0, 0.18);
 }
 
 .chess-404__sq.is-selected {

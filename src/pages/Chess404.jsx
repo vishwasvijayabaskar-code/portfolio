@@ -22,6 +22,14 @@ const BOARD = [
 ];
 
 const SOLUTION = { row: 1, col: 5 }; // f7 square — Qxf7#
+const QUEEN_ORIGIN = { row: 3, col: 7 }; // h5
+
+function isLegalQueenMove(r, c) {
+  if (r === QUEEN_ORIGIN.row && c === QUEEN_ORIGIN.col) return false;
+  const dr = r - QUEEN_ORIGIN.row;
+  const dc = c - QUEEN_ORIGIN.col;
+  return dr === 0 || dc === 0 || Math.abs(dr) === Math.abs(dc);
+}
 
 export default function Chess404() {
   const [solved, setSolved] = useState(false);
@@ -58,7 +66,8 @@ export default function Chess404() {
             <span className="lime">Mate in 1.</span> Find the mate to find your way back.
           </p>
           <p className="chess-404__hint mono">
-            HINT · WHITE TO MOVE · YOUR QUEEN IS HUNGRY · ATTEMPTS {String(attempts).padStart(2, '0')}
+            HINT · WHITE TO MOVE · QUEEN ON h5 · LEGAL SQUARES GLOW
+            {attempts > 0 && ` · ATTEMPTS ${String(attempts).padStart(2, '0')}`}
           </p>
         </header>
 
@@ -69,11 +78,12 @@ export default function Chess404() {
                 const dark = (r + c) % 2 === 1;
                 const isSelected = highlight && highlight.r === r && highlight.c === c;
                 const isCorrect = solved && r === SOLUTION.row && c === SOLUTION.col;
+                const isLegal = isLegalQueenMove(r, c);
                 return (
                   <button
                     key={`${r}-${c}`}
                     type="button"
-                    className={`chess-404__sq ${dark ? 'is-dark' : 'is-light'} ${isSelected ? 'is-selected' : ''} ${isCorrect ? 'is-correct' : ''}`}
+                    className={`chess-404__sq ${dark ? 'is-dark' : 'is-light'} ${isSelected ? 'is-selected' : ''} ${isCorrect ? 'is-correct' : ''} ${isLegal ? 'is-legal' : ''}`}
                     onClick={() => handleClick(r, c)}
                     {...sq}
                   >

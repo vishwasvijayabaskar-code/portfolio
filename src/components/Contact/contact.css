@@ -22,11 +22,62 @@
   text-transform: uppercase;
 }
 
-.contact__headline {
-  font-size: clamp(4rem, 16vw, 18rem);
-  line-height: 0.85;
+.contact__pretitle {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--accent-lime);
+  text-transform: uppercase;
+  border-bottom: 1px dashed rgba(191, 255, 54, 0.25);
+  padding-bottom: 0.75rem;
+}
+
+.contact__email-headline {
+  font-size: clamp(2.2rem, 7vw, 8rem);
+  line-height: 0.9;
   color: var(--accent-cream);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
+  word-break: break-all;
+  cursor: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+.contact__email-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.contact__email-link:hover {
+  color: var(--accent-lime);
+}
+
+.contact__email-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 4px;
+  background: var(--accent-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.contact__email-link:hover::after {
+  transform: scaleX(1);
+}
+
+.contact__at {
+  color: var(--accent-red);
+}
+
+.contact__sublede {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: var(--text-muted);
+  text-transform: uppercase;
 }
 
 .contact__links {
