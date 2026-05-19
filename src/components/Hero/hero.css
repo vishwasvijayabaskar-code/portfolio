@@ -1,0 +1,109 @@
+.hero {
+  height: 100vh;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 6vh, 5rem);
+}
+
+.hero__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 224, 0.12);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 13.5vw, 17rem);
+  line-height: 0.84;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--accent-cream);
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__title-row {
+  display: block;
+  overflow: hidden;
+  line-height: 0.84;
+}
+
+.hero__title-tag {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: clamp(0.5rem, 1.5vh, 1.5rem);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero__tagline {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4.8vw, 4.8rem);
+  letter-spacing: -0.015em;
+  color: var(--accent-lime);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.hero__id {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.hero__char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.hero__sub {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  border-top: 1px solid rgba(255, 255, 224, 0.12);
+  padding-top: 1.25rem;
+}
+
+.hero__sub-bullet {
+  color: var(--accent-red);
+  animation: pulse 1.6s ease-in-out infinite;
+  font-size: 9px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@media (max-width: 768px) {
+  .hero__meta span:nth-child(2),
+  .hero__meta span:nth-child(3) {
+    display: none;
+  }
+  .hero__tagline {
+    font-size: clamp(1.6rem, 7vw, 3rem);
+  }
+}

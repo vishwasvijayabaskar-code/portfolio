@@ -1,0 +1,35 @@
+:root {
+  /* palette */
+  --bg-base: #07050B;
+  --bg-deep: #02010a;
+  --accent-lime: #BFFF36;
+  --accent-red: #F04000;
+  --accent-cream: #FFFFE0;
+  --hot-pink: #FF1493;
+  --hot-cyan: #00E5FF;
+  --hot-magenta: #C800FF;
+
+  /* text */
+  --text-primary: #FFFFE0;
+  --text-muted: rgba(255, 255, 224, 0.55);
+  --text-dim: rgba(255, 255, 224, 0.32);
+
+  /* fonts */
+  --font-display: 'Anton', Impact, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* sizing */
+  --container: min(1440px, 92vw);
+  --gutter: clamp(1rem, 4vw, 4rem);
+
+  /* easings */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* z layers */
+  --z-canvas: -1;
+  --z-grain: 100;
+  --z-cursor: 9999;
+}

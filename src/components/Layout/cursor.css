@@ -1,0 +1,86 @@
+.cursor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 768px), (hover: none) {
+  .cursor {
+    display: none;
+  }
+}
+
+.cursor__dot,
+.cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform, width, height;
+  pointer-events: none;
+}
+
+.cursor__dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-cream);
+  transition: width 0.25s var(--ease-out-expo), height 0.25s var(--ease-out-expo), background 0.2s ease;
+}
+
+.cursor__ring {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--accent-cream);
+  transition: width 0.35s var(--ease-out-expo), height 0.35s var(--ease-out-expo), border-color 0.2s ease, background 0.2s ease;
+  display: grid;
+  place-items: center;
+}
+
+/* hover variants */
+.cursor__ring--hover {
+  width: 86px;
+  height: 86px;
+  background: var(--accent-cream);
+  border-color: var(--accent-cream);
+}
+
+.cursor__dot--hover {
+  width: 0;
+  height: 0;
+}
+
+.cursor__ring--view {
+  width: 100px;
+  height: 100px;
+  background: var(--accent-lime);
+  border-color: var(--accent-lime);
+}
+
+.cursor__dot--view {
+  width: 0;
+  height: 0;
+}
+
+.cursor__ring--write {
+  width: 100px;
+  height: 100px;
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.cursor__dot--write {
+  width: 0;
+  height: 0;
+}
+
+.cursor__label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--bg-base);
+  text-transform: uppercase;
+  white-space: nowrap;
+}

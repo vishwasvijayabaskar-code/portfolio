@@ -1,0 +1,118 @@
+@import './reset.css';
+@import './variables.css';
+
+html,
+body {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+html {
+  background: var(--bg-base);
+}
+
+body {
+  cursor: none;
+  background: transparent;
+}
+
+@media (max-width: 768px), (hover: none) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* selection */
+::selection {
+  background: var(--accent-lime);
+  color: var(--bg-base);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* base section layout */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* utility */
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.lime {
+  color: var(--accent-lime);
+}
+
+.red {
+  color: var(--accent-red);
+}
+
+.cream {
+  color: var(--accent-cream);
+}
+
+/* nyan-cat conic gradient background */
+.nyan-bg {
+  position: fixed;
+  inset: -20%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    var(--bg-base) 0deg,
+    var(--hot-pink) 60deg,
+    var(--bg-base) 110deg,
+    var(--hot-cyan) 170deg,
+    var(--bg-base) 220deg,
+    var(--accent-lime) 280deg,
+    var(--bg-base) 330deg,
+    var(--accent-red) 360deg
+  );
+  filter: blur(120px) saturate(1.4);
+  opacity: 0.35;
+  z-index: 0;
+  animation: nyan-rotate 60s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes nyan-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* hide focus on non-keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-lime);
+  outline-offset: 4px;
+}
