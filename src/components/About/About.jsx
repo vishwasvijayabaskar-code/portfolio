@@ -23,7 +23,7 @@ export default function About() {
         <WordReveal
           as="p"
           className="about__lead display"
-          text="Most days I'm training neural networks to read RNA. Other days I am Gooning at Home."
+          text="Most days I'm training neural networks to read RNA. Other days, I am Larping my ECs."
         />
 
         <div className="about__body">
