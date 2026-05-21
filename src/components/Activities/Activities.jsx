@@ -17,7 +17,7 @@ export default function Activities() {
     <section className="activities" id="activities">
       <div className="activities__inner container">
         <MarginNote side="left" rotate={-4} top="55%">
-          chess kids teach me more than i teach them
+          kids know more than what i teach them
         </MarginNote>
         <h2 className="activities__heading display">
           Off <span className="red">/ keyboard</span>.
